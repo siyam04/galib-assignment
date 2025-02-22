@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # Custom apps
     "user",
     "blog",
+    "task",
 ]
 
 MIDDLEWARE = [

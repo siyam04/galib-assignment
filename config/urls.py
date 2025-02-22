@@ -35,4 +35,7 @@ urlpatterns = [
     # User APIs
     path('api/', include('user.urls')),
 
+    # Task APIs
+    path('api/', include('task.urls')),
+
 ]
