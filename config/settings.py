@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # Custom apps
     "user",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -141,5 +142,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DRF config
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',  # Global pagination config
-    'PAGE_SIZE': 5
+    'PAGE_SIZE': 2
 }

@@ -29,6 +29,9 @@ urlpatterns = [
     # API Doc (Swagger)
     path('', schema_view.with_ui('swagger'), name='schema-swagger-ui'),
 
+    # Blog APIs
+    path('api/', include('blog.urls')),
+
     # User APIs
     path('api/', include('user.urls')),
 
