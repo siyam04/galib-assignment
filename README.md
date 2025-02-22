@@ -6,5 +6,5 @@
 
 ## Links
 
-* API Doc (Base): http://127.0.0.1:8000/
-* Django Admin: http://127.0.0.1:8000/admin/
+* API Doc: http://127.0.0.1:8000/
+* Django Admin Site: http://127.0.0.1:8000/admin/
