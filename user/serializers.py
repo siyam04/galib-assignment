@@ -1,12 +1,12 @@
 from rest_framework import serializers
 from django.contrib.auth.hashers import make_password
 
-from .models import User
+from .models import CustomUser
 
 
-class UserSerializer(serializers.ModelSerializer):
+class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = CustomUser
         fields = ['id', 'name', 'email', 'password', 'created_at']
         extra_kwargs = {
             'password': {'write_only': True},
@@ -23,7 +23,7 @@ class UserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({"password": "Password must be at least 8 characters long"})
 
         # Check if email already exists
-        if User.objects.filter(email=data['email']).exists():
+        if CustomUser.objects.filter(email=data['email']).exists():
             raise serializers.ValidationError({"email": "Email already exists"})
 
         return data
